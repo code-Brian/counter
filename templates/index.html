@@ -11,6 +11,11 @@
     <title>COUNTER</title>
 </head>
 <body>
-    <p>ifitbleedswecankillit</p>
+    <form action='/visit' method="post">
+        <h1>COUNT</h1>
+        <p>{{ session['visit'] }} times.</p>
+        <input type="submit" value="add" name="visits"></input>
+        <p>ifitbleedswecankillit</p>
+    </form>
 </body>
 </html>

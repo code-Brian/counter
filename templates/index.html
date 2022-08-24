@@ -13,8 +13,9 @@
 <body>
     <form action='/visit' method="post">
         <h1>COUNT</h1>
-        <p>{{ session['visit'] }} times.</p>
-        <input type="submit" value="add" name="visits"></input>
+        <p>{{ session['visits'] }} times.</p>
+        <input type= "number" name="visits"></input>
+        <button type="submit">Add Visit</button>
         <p>ifitbleedswecankillit</p>
     </form>
 </body>

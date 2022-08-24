@@ -11,12 +11,30 @@
     <title>COUNTER</title>
 </head>
 <body>
-    <form action='/visit' method="post">
-        <h1>COUNT</h1>
-        <p>{{ session['visits'] }} times.</p>
-        <input type= "number" name="visits"></input>
-        <button type="submit">Add Visit</button>
-        <p>ifitbleedswecankillit</p>
-    </form>
+    <div class="col">
+        <div class="row">
+            <form action='/visit' method="post">
+                <h1>COUNT</h1>
+                <p>{{ session['visits'] }} times.</p>
+                <input type= "number" name="visits"></input>
+                <button type="submit">Add Visit</button>
+                <p>ifitbleedswecankillit</p>
+            </form>
+            <form action='/destroy_session' method="get">
+                <button type="submit">GET TO THE CHOPPA</button>
+                <p>ifitbleedswecankillit</p>    
+            </form>
+            <form action='/predators' method="post">
+                <input type= "number" name="predators"></input>
+                <button type="submit">Add Predators</button>
+                <div>
+                    {% for i in range(0, session['predators']) %}
+                        <img src="static\img\predator.gif" alt="a very spoopy predator">
+                    {% endfor %}
+                </div>
+                <p>ifitbleedswecankillit</p>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

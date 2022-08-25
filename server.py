@@ -30,7 +30,7 @@ def count_visits():
 
 @app.route('/predators', methods=['POST'])
 def count_predators():
-    print('---------/visit route ran')
+    print('---------/predators route ran')
     session['predators'] = int(request.form['predators']) + session['predators'] -1
     print("--------------",type(session['predators']))
     return redirect('/')
@@ -39,7 +39,7 @@ def count_predators():
 def destroy_session():
     session.pop('visits')
     session.pop('predators')
-    
+
     return redirect('/')
 
 if __name__ == '__main__':
